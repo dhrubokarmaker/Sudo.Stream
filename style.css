@@ -1,4 +1,4 @@
-body {
+git push -u origin mainbody {
   background: rgb(245, 221, 201);
   background: linear-gradient(
     90deg,
@@ -13,6 +13,7 @@ h1 {
   color: #e74c3c;
   font-size: calc(2vw + 10px);
   animation: h1-load 300ms ease-out;
+  /* some stuff */
 }
 
 @keyframes h1-load {
