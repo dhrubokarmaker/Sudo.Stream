@@ -196,4 +196,31 @@ input::-webkit-inner-spin-button {
     border-radius: 50%;
     position: static;
   }
+  ul {
+    grid-template-columns: repeat(9, 8vw);
+    grid-template-rows: repeat(9, 8vw);
+  }
+  li:nth-child(n):nth-child(-n + 9) {
+    border-top-width: 0.6vw;
+  }
+  
+  li:nth-child(n + 73):nth-child(-n + 81) {
+    border-bottom-width: 0.6vw;
+  }
+  
+  li:nth-child(3n) {
+    border-right-width: 0.6vw;
+  }
+  
+  li:nth-child(9n + 1) {
+    border-left-width: 0.6vw;
+  }
+  
+  li:nth-child(n + 19):nth-child(-n + 27) {
+    border-bottom-width: 0.6vw;
+  }
+  
+  li:nth-child(n + 46):nth-child(-n + 54) {
+    border-bottom-width: 0.6vw;
+  }
 }
