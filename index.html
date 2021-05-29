@@ -1,107 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sudoku Solver</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/e076377bcf.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e076377bcf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1>Sudoku Solver</h1>
-        <ul >
-            <li><input type="number" id = "0" ></li>
-            <li><input type="number" id = "1"></li>
-            <li><input type="number" id = "2"></li>
-            <li><input type="number" id = "3"></li>
-            <li><input type="number" id = "4"></li>
-            <li><input type="number" id = "5"></li>
-            <li><input type="number" id = "6"></li>
-            <li><input type="number" id = "7"></li>
-            <li><input type="number" id = "8"></li>
-            <li><input type="number" id = "9"></li>
-            <li><input type="number" id = "10"></li>
-            <li><input type="number" id = "11"></li>
-            <li><input type="number" id = "12"></li>
-            <li><input type="number" id = "13"></li>
-            <li><input type="number" id = "14"></li>
-            <li><input type="number" id = "15"></li>
-            <li><input type="number" id = "16"></li>
-            <li><input type="number" id = "17"></li>
-            <li><input type="number" id = "18"></li>
-            <li><input type="number" id = "19"></li>
-            <li><input type="number" id = "20"></li>
-            <li><input type="number" id = "21"></li>
-            <li><input type="number" id = "22"></li>
-            <li><input type="number" id = "23"></li>
-            <li><input type="number" id = "24"></li>
-            <li><input type="number" id = "25"></li>
-            <li><input type="number" id = "26"></li>
-            <li><input type="number" id = "27"></li>
-            <li><input type="number" id = "28"></li>
-            <li><input type="number" id = "29"></li>
-            <li><input type="number" id = "30"></li>
-            <li><input type="number" id = "31"></li>
-            <li><input type="number" id = "32"></li>
-            <li><input type="number" id = "33"></li>
-            <li><input type="number" id = "34"></li>
-            <li><input type="number" id = "35"></li>
-            <li><input type="number" id = "36"></li>
-            <li><input type="number" id = "37"></li>
-            <li><input type="number" id = "38"></li>
-            <li><input type="number" id = "39"></li>
-            <li><input type="number" id = "40"></li>
-            <li><input type="number" id = "41"></li>
-            <li><input type="number" id = "42"></li>
-            <li><input type="number" id = "43"></li>
-            <li><input type="number" id = "44"></li>
-            <li><input type="number" id = "45"></li>
-            <li><input type="number" id = "46"></li>
-            <li><input type="number" id = "47"></li>
-            <li><input type="number" id = "48"></li>
-            <li><input type="number" id = "49"></li>
-            <li><input type="number" id = "50"></li>
-            <li><input type="number" id = "51"></li>
-            <li><input type="number" id = "52"></li>
-            <li><input type="number" id = "53"></li>
-            <li><input type="number" id = "54"></li>
-            <li><input type="number" id = "55"></li>
-            <li><input type="number" id = "56"></li>
-            <li><input type="number" id = "57"></li>
-            <li><input type="number" id = "58"></li>
-            <li><input type="number" id = "59"></li>
-            <li><input type="number" id = "60"></li>
-            <li><input type="number" id = "61"></li>
-            <li><input type="number" id = "62"></li>
-            <li><input type="number" id = "63"></li>
-            <li><input type="number" id = "64"></li>
-            <li><input type="number" id = "65"></li>
-            <li><input type="number" id = "66"></li>
-            <li><input type="number" id = "67"></li>
-            <li><input type="number" id = "68"></li>
-            <li><input type="number" id = "69"></li>
-            <li><input type="number" id = "70"></li>
-            <li><input type="number" id = "71"></li>
-            <li><input type="number" id = "72"></li>
-            <li><input type="number" id = "73"></li>
-            <li><input type="number" id = "74"></li>
-            <li><input type="number" id = "75"></li>
-            <li><input type="number" id = "76"></li>
-            <li><input type="number" id = "77"></li>
-            <li><input type="number" id = "78"></li>
-            <li><input type="number" id = "79"></li>
-            <li><input type="number" id = "80"></li>
-        </ul>
-        <div class="solve">
-            <button type="solveButton" class="solver">SOLVE</button>
-            <button type="reset" class="reset"><i class="fas fa-redo"></i></button>
-        </div>
-        </main>
-          
-</body>
-
+      <h1>Sudoku Solver</h1>
+      <ul>
+        <li><input type="number" id="0" /></li>
+        <li><input type="number" id="1" /></li>
+        <li><input type="number" id="2" /></li>
+        <li><input type="number" id="3" /></li>
+        <li><input type="number" id="4" /></li>
+        <li><input type="number" id="5" /></li>
+        <li><input type="number" id="6" /></li>
+        <li><input type="number" id="7" /></li>
+        <li><input type="number" id="8" /></li>
+        <li><input type="number" id="9" /></li>
+        <li><input type="number" id="10" /></li>
+        <li><input type="number" id="11" /></li>
+        <li><input type="number" id="12" /></li>
+        <li><input type="number" id="13" /></li>
+        <li><input type="number" id="14" /></li>
+        <li><input type="number" id="15" /></li>
+        <li><input type="number" id="16" /></li>
+        <li><input type="number" id="17" /></li>
+        <li><input type="number" id="18" /></li>
+        <li><input type="number" id="19" /></li>
+        <li><input type="number" id="20" /></li>
+        <li><input type="number" id="21" /></li>
+        <li><input type="number" id="22" /></li>
+        <li><input type="number" id="23" /></li>
+        <li><input type="number" id="24" /></li>
+        <li><input type="number" id="25" /></li>
+        <li><input type="number" id="26" /></li>
+        <li><input type="number" id="27" /></li>
+        <li><input type="number" id="28" /></li>
+        <li><input type="number" id="29" /></li>
+        <li><input type="number" id="30" /></li>
+        <li><input type="number" id="31" /></li>
+        <li><input type="number" id="32" /></li>
+        <li><input type="number" id="33" /></li>
+        <li><input type="number" id="34" /></li>
+        <li><input type="number" id="35" /></li>
+        <li><input type="number" id="36" /></li>
+        <li><input type="number" id="37" /></li>
+        <li><input type="number" id="38" /></li>
+        <li><input type="number" id="39" /></li>
+        <li><input type="number" id="40" /></li>
+        <li><input type="number" id="41" /></li>
+        <li><input type="number" id="42" /></li>
+        <li><input type="number" id="43" /></li>
+        <li><input type="number" id="44" /></li>
+        <li><input type="number" id="45" /></li>
+        <li><input type="number" id="46" /></li>
+        <li><input type="number" id="47" /></li>
+        <li><input type="number" id="48" /></li>
+        <li><input type="number" id="49" /></li>
+        <li><input type="number" id="50" /></li>
+        <li><input type="number" id="51" /></li>
+        <li><input type="number" id="52" /></li>
+        <li><input type="number" id="53" /></li>
+        <li><input type="number" id="54" /></li>
+        <li><input type="number" id="55" /></li>
+        <li><input type="number" id="56" /></li>
+        <li><input type="number" id="57" /></li>
+        <li><input type="number" id="58" /></li>
+        <li><input type="number" id="59" /></li>
+        <li><input type="number" id="60" /></li>
+        <li><input type="number" id="61" /></li>
+        <li><input type="number" id="62" /></li>
+        <li><input type="number" id="63" /></li>
+        <li><input type="number" id="64" /></li>
+        <li><input type="number" id="65" /></li>
+        <li><input type="number" id="66" /></li>
+        <li><input type="number" id="67" /></li>
+        <li><input type="number" id="68" /></li>
+        <li><input type="number" id="69" /></li>
+        <li><input type="number" id="70" /></li>
+        <li><input type="number" id="71" /></li>
+        <li><input type="number" id="72" /></li>
+        <li><input type="number" id="73" /></li>
+        <li><input type="number" id="74" /></li>
+        <li><input type="number" id="75" /></li>
+        <li><input type="number" id="76" /></li>
+        <li><input type="number" id="77" /></li>
+        <li><input type="number" id="78" /></li>
+        <li><input type="number" id="79" /></li>
+        <li><input type="number" id="80" /></li>
+      </ul>
+      <div class="solve">
+        <button onclick="main();" type="solveButton" class="solver">
+          SOLVE
+        </button>
+        <button onclick="reset();" type="reset" class="reset">
+          <i class="fas fa-redo"></i>
+        </button>
+      </div>
+    </main>
+    <script src="sudoku.js"></script>
+  </body>
 </html>
