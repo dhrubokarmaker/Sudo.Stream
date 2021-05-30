@@ -74,6 +74,23 @@ li {
   transition: 0.3s;
 }
 
+li input {
+  color: #000000;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  font-size: calc(2vw + 5px);
+  font-family: headerFont;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  transition: 0.3s;
+}
+
+li input:focus-within {
+  background-color: #e09450;
+}
+
 li:focus-within {
   background-color: #e09450;
 }
@@ -104,9 +121,6 @@ li:focus-within {
 .solver:hover {
   background: #db3b3b;
 }
-.reset:hover {
-  background: #31a770;
-}
 
 .reset {
   cursor: pointer;
@@ -127,21 +141,8 @@ li:focus-within {
   right: 30vw;
 }
 
-li input {
-  color: #000000;
-  padding: 0;
-  border: 0;
-  text-align: center;
-  font-size: calc(2vw + 10px);
-  font-family: headerFont;
-  width: 100%;
-  height: 100%;
-  outline: none;
-  transition: 0.3s;
-}
-
-li input:focus-within {
-  background-color: #e09450;
+.reset:hover {
+  background: #31a770;
 }
 
 input::-webkit-outer-spin-button,
@@ -152,47 +153,28 @@ input::-webkit-inner-spin-button {
 
 @font-face {
   font-family: headerFont;
-  src: url(go3v2.ttf);
+  src: url(RifficFree-Bold.ttf);
 }
 
 @media all and (max-width: 800px) {
   .solve {
-    display: flex;
     align-items: center;
-    justify-content: center;
   }
   .solver {
-    cursor: pointer;
     padding: 1em 1.5em 1em;
     margin: 8px;
     display: block;
     color: #fff;
-    background: #e74c3c;
-    transition: 0.3s;
-    font-family: headerFont;
-    font-weight: 800;
     font-size: 0.85em;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
     border-radius: 8px;
     position: static;
   }
 
   .reset {
-    cursor: pointer;
     padding: 1em 1.3em 1.1em;
     margin: 8px;
     display: block;
-    color: #fff;
-    background: #63d688;
-    transition: 0.3s;
-    font-family: headerFont;
-    font-weight: 800;
     font-size: 0.85em;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
     border-radius: 50%;
     position: static;
   }
@@ -201,7 +183,7 @@ input::-webkit-inner-spin-button {
     grid-template-rows: repeat(9, 8vw);
   }
   li input {
-    font-size: calc(4vw + 10px);
+    font-size: calc(4vw + 5px);
   }
   h1 {
     font-size: calc(4vw + 10px);

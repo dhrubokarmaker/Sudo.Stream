@@ -1,29 +1,7 @@
-const size = 9;
-const b = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-];
-
-const b1 = [
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 0],
-];
+const size = 9; // board size
 
 const firstBox = [
+  // represents a single 3x3 unit
   [0, 0],
   [0, 1],
   [0, 2],
@@ -35,8 +13,7 @@ const firstBox = [
   [2, 2],
 ];
 
-const b3 = [...b1];
-
+// solves a given board
 function solve(board) {
   if (solved(board)) {
     return board;
@@ -46,6 +23,7 @@ function solve(board) {
   }
 }
 
+// takes a list of board as parameter and allows backtracking
 function solveBoards(boards) {
   if (boards.length == 0) {
     return false;
@@ -59,6 +37,7 @@ function solveBoards(boards) {
   }
 }
 
+// returns true if the  board is solved
 function solved(board) {
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
@@ -70,10 +49,7 @@ function solved(board) {
   return true;
 }
 
-function validBoards(boards) {
-  return boards.filter(validBoard);
-}
-
+// produces a list of possible boards
 function possibleBoards(board) {
   let coordinate = nextEmpty(board);
   let boards = [];
@@ -87,10 +63,17 @@ function possibleBoards(board) {
   return boards;
 }
 
+// filters valid boards from given list of boards
+function validBoards(boards) {
+  return boards.filter(validBoard);
+}
+
+// returns true if the board is valid
 function validBoard(board) {
   return validRows(board) && validColumns(board) && validBoxes(board);
 }
 
+// returns true if the board has valid boxes
 function validBoxes(board) {
   for (let k = 0; k < 9; k += 3) {
     for (let i = 0; i < 9; i += 3) {
@@ -111,6 +94,7 @@ function validBoxes(board) {
   return true;
 }
 
+// checks if the board has valid columns
 function validColumns(board) {
   for (let i = 0; i < 9; i++) {
     let nums = [];
@@ -127,6 +111,7 @@ function validColumns(board) {
   return true;
 }
 
+// checks if the board has valid rows
 function validRows(board) {
   for (let i = 0; i < 9; i++) {
     let nums = [];
@@ -143,6 +128,7 @@ function validRows(board) {
   return true;
 }
 
+// returns an array of coordinate of next empty slot in [x,y]
 function nextEmpty(board) {
   let coordinate = [];
   for (let i = 0; i < 9; i++) {
@@ -156,6 +142,7 @@ function nextEmpty(board) {
   }
 }
 
+// creates an empty board with 0s in every slot
 function makeEmptyBoard() {
   let myArray = new Array(size);
   for (i = 0; i < size; i++) {
@@ -167,6 +154,7 @@ function makeEmptyBoard() {
   return myArray;
 }
 
+// retrieves board from the values in html elements
 function retrieveBoard() {
   let emptyBoard = makeEmptyBoard();
   count = 0;
@@ -182,6 +170,7 @@ function retrieveBoard() {
   return emptyBoard;
 }
 
+// updates the solve board onto html elements
 function updateBoard(board) {
   count = 0;
   for (let i = 0; i < size; i++) {
@@ -195,6 +184,7 @@ function updateBoard(board) {
   }
 }
 
+// solves the board retrieved from the webpage
 function main() {
   let board = retrieveBoard();
   console.log(board);
@@ -210,6 +200,7 @@ function main() {
   }
 }
 
+// returns true if the board does not contain any illegal values
 function validateBoard(board) {
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
@@ -222,6 +213,7 @@ function validateBoard(board) {
   return true;
 }
 
+// resets the board
 function reset() {
   count = 0;
   for (let i = 0; i < size; i++) {
