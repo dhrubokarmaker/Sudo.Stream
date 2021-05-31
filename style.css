@@ -15,6 +15,24 @@ h1 {
   animation: h1-load 300ms ease-out;
 }
 
+a[class="fab fa-github"] {
+  color: #e74c3c;
+  font-size: calc(2vw + 5px);
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  right: 0;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+}
+
+a[class="fab fa-github"]:hover {
+  cursor: pointer;
+  color: #db3b3b;
+}
+
 @keyframes h1-load {
   0% {
     transform: translateY(-100%);
@@ -210,5 +228,9 @@ input::-webkit-inner-spin-button {
 
   li:nth-child(n + 46):nth-child(-n + 54) {
     border-bottom-width: 0.6vw;
+  }
+
+  a[class="fab fa-github"] {
+    font-size: calc(4vw + 10px);
   }
 }
