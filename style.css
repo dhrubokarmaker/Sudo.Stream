@@ -26,6 +26,7 @@ a[class="fab fa-github"] {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 a[class="fab fa-github"]:hover {
