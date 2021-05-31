@@ -29,6 +29,11 @@ a[class="fab fa-github"] {
   transition: 0.3s;
 }
 
+img{
+  max-height: 30px;
+  height: auto;
+}
+
 a[class="fab fa-github"]:hover {
   cursor: pointer;
   color: #db3b3b;
